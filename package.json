@@ -16,7 +16,9 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "deploy": "npm run build && yes | cp -rf -v ./build/* ./"
+        "copy-build-files": "yes | cp -rf -v ./build/* ./",
+        "update-repo": "git add -A && git commit -m 'updated' && git push origin master",
+        "deploy": "npm run build && npm run copy-build-files && npm run update-repo"
     },
     "eslintConfig": {
         "extends": [
