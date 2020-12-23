@@ -16,7 +16,7 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "deploy": "yes | cp -rf -v ./public/* ./"
+        "deploy": "npm run build && yes | cp -rf -v ./build/* ./"
     },
     "eslintConfig": {
         "extends": [
