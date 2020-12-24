@@ -185,7 +185,7 @@ function App() {
                     src={process.env.PUBLIC_URL + '/assets/profile.jpeg'}
                     style={{ margin: '0px auto 20px' }}
                 />
-                <Window resizable className="window" style={{ width: '100%', minHeight: 500 }}>
+                <Window resizable className="window" style={{ width: '100%', minHeight: 200 }}>
                     <Hourglass size={26} style={{ position: 'absolute', top: 10, right: 10 }} />
                     <WindowHeader className="window-header">
                         <span>{'> Hello world!'} </span>
@@ -212,7 +212,7 @@ function App() {
                     </Toolbar>
                     <Divider />
                     <WindowContent>
-                        <div style={{ maxHeight: 350, overflowY: 'scroll' }}>
+                        <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
                             {tab === 0 ? <AboutMe /> : <Contact />}
                         </div>
                     </WindowContent>
