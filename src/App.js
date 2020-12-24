@@ -212,7 +212,7 @@ function App() {
                     </Toolbar>
                     <Divider />
                     <WindowContent>
-                        <div style={{ maxHeight: 400, overflowY: 'scroll' }}>
+                        <div style={{ maxHeight: 350, overflowY: 'scroll' }}>
                             {tab === 0 ? <AboutMe /> : <Contact />}
                         </div>
                     </WindowContent>
