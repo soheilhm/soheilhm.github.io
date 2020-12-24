@@ -11,6 +11,8 @@ import {
     Divider,
     Hourglass,
     Fieldset,
+    Desktop,
+    Tooltip,
 } from 'react95';
 
 import original from 'react95/dist/themes/original';
@@ -179,11 +181,47 @@ function App() {
         >
             <GlobalStyles />
             <ThemeProvider theme={original}>
-                <Avatar
-                    size={100}
-                    src={process.env.PUBLIC_URL + '/assets/profile.jpeg'}
-                    style={{ margin: '0px auto 25px' }}
-                />
+                <div style={{ position: 'relative', width: '100%', height: 200 }}>
+                    <div
+                        style={{
+                            position: 'absolute',
+                            left: 'calc(50% - 98px)',
+                            zIndex: 99,
+                            top: 0,
+                        }}
+                    >
+                        <Desktop
+                            backgroundStyles={{
+                                background: 'blue',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                            }}
+                            width={300}
+                        >
+                            <Avatar
+                                // size={50}
+                                src={process.env.PUBLIC_URL + '/assets/profile.jpeg'}
+                                style={{ width: 40, height: 40, margin: '5px auto' }}
+                            />
+                            <p style={{ textAlign: 'center', color: 'white', fontWeight: 300 }}>
+                                Hello World !
+                            </p>
+                            <h3
+                                style={{
+                                    textAlign: 'center',
+                                    color: 'white',
+                                    fontWeight: 900,
+                                    marginBottom: 10,
+                                }}
+                            >
+                                soheilhm.github.io
+                            </h3>
+                            {/* <br /> */}
+                        </Desktop>
+                    </div>
+                </div>
+
                 <Window resizable className="window" style={{ width: '100%', minHeight: 200 }}>
                     <Hourglass size={26} style={{ position: 'absolute', top: 10, right: 10 }} />
                     <WindowHeader className="window-header">
@@ -219,6 +257,16 @@ function App() {
                         </div>
                     </WindowContent>
                 </Window>
+                <div style={{ width: 150, margin: '15px auto', outline: 'none', border: 'none' }}>
+                    <Tooltip text="long live clippy !" enterDelay={100} leaveDelay={500}>
+                        <img
+                            width="150"
+                            src={process.env.PUBLIC_URL + '/assets/clippy.png'}
+                            alt="clippy"
+                            style={{ transform: 'rotate(-15deg)' }}
+                        />
+                    </Tooltip>
+                </div>
             </ThemeProvider>
         </div>
     );
