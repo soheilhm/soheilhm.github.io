@@ -176,7 +176,6 @@ function App() {
                 padding: '1rem',
                 background: 'teal',
                 height: '100%',
-                position: 'fixed',
             }}
         >
             <GlobalStyles />
