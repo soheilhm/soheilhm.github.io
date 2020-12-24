@@ -182,9 +182,9 @@ function App() {
             <GlobalStyles />
             <ThemeProvider theme={original}>
                 <Avatar
-                    size={150}
+                    size={100}
                     src={process.env.PUBLIC_URL + '/assets/profile.jpeg'}
-                    style={{ margin: '0px auto 20px' }}
+                    style={{ margin: '0px auto 10px' }}
                 />
                 <Window resizable className="window" style={{ width: '100%', minHeight: 200 }}>
                     <Hourglass size={26} style={{ position: 'absolute', top: 10, right: 10 }} />
