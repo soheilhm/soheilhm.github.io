@@ -175,7 +175,6 @@ function App() {
             style={{
                 padding: '1rem',
                 background: 'teal',
-                height: '100%',
             }}
         >
             <GlobalStyles />
@@ -183,7 +182,7 @@ function App() {
                 <Avatar
                     size={100}
                     src={process.env.PUBLIC_URL + '/assets/profile.jpeg'}
-                    style={{ margin: '0px auto 10px' }}
+                    style={{ margin: '0px auto 25px' }}
                 />
                 <Window resizable className="window" style={{ width: '100%', minHeight: 200 }}>
                     <Hourglass size={26} style={{ position: 'absolute', top: 10, right: 10 }} />
@@ -212,7 +211,10 @@ function App() {
                     </Toolbar>
                     <Divider />
                     <WindowContent>
-                        <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
+                        <div
+                            className="scrollbar"
+                            style={{ maxHeight: '300px', overflowY: 'scroll', minHeight: 150 }}
+                        >
                             {tab === 0 ? <AboutMe /> : <Contact />}
                         </div>
                     </WindowContent>
